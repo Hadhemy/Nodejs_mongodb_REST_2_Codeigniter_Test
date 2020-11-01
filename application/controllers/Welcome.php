@@ -20,17 +20,27 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-	    echo "coco";
+	    
+            $curl = curl_init();
+
+            curl_setopt_array($curl, array(
+            CURLOPT_URL => "http://localhost:8001/api/users",
+           
+            CURLOPT_CUSTOMREQUEST => "GET"
+            ));
+
+            $response = curl_exec($curl);
+
+            curl_close($curl);
+            $this->load->view('add');
+            echo $response;
+           
+
+            
 
 	}
 
-	public function create()
-	{
-     $this->load->view('user_form');
-     $config['base_url'] = '/create';
 
-
-	}
 
 	// public function index()
 	// {

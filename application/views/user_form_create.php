@@ -3,46 +3,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="utf-8">
 </head>
 <body>
 
 <div class="column" align="center">
+ 
     <h1 class="title">Create User</h1>
-    <form action="" method="POST">
+    <form method="post">
         <div class="field">
             <label class="label">Name</label>
             <div class="control">
-                <input id="name" name="name" class="input" type="text" placeholder="Type the user name">
+                <input type="text"     name="name"  placeholder="Type the user name" size="100">
             </div>
         </div>
+        
          <div class="field">
             <label class="label">Gender</label>
             <div class="control">
-                <input id="gender" name="gender" class="input" type="text" placeholder="Type the user gender">
+                <input type="text"  name="gender" placeholder="Type the user gender" size="100">
             </div>
         </div>
+        
         <div class="field">
-            <label class="label">Phone-Number</label>
-            <div class="control">
-                <input id="name" name="name" class="input" type="text" placeholder="Type the user phone-number">
+          <label class="label">Phone_Number</label>
+          <div class="control">
+            <input type="text" name="phone_number" placeholder="Type the user phone_number" size="100">
             </div>
         </div>
+        
         <div class="field">
             <label class="label">Email</label>
             <div class="control">
-                <input id="email" name="email" class="input" type="email" placeholder="Type the user email">
+                <input type="email" name="email" placeholder="Type the user email" size="100">
             </div>
         </div>
+         
          <div class="field">
             <label class="label">Address</label>
             <div class="control">
-                <input id="address" name="address" class="input" type="text" placeholder="Type the user address">
+                <input type="text" name="address" placeholder="Type the user address" size="100">
             </div>
         </div>
+        
         <div class="field is-grouped">
             <div class="control">
-                <button class="button is-link">Save User</button>
+                <input type = "submit" value = "Submit"  style="background-color: pink" />
             </div>
         </div>
     </form>
