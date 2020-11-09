@@ -113,7 +113,7 @@ public function call_api_update(){
 $payload = json_encode($data);
 
 // Prepare new cURL resource & make sure that i will generate dynamically this id
-$ch = curl_init('http://localhost:8001/api/users/5f9ed3ebef29e82b1c89c61d');
+$ch = curl_init('http://localhost:8001/api/users/......');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLINFO_HEADER_OUT, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
@@ -140,7 +140,7 @@ $this->load->view('success');
 public function call_api_delete(){
 
 // Prepare new cURL resource & i should make sure that i generate this id dynamically
-$ch = curl_init('http://localhost:8001/api/users/5f9ed548ef29e82b1c89c621');
+$ch = curl_init('http://localhost:8001/api/users/....');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLINFO_HEADER_OUT, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
