@@ -34,22 +34,30 @@ class Welcome extends CI_Controller {
             curl_close($curl);
             $this->load->view('add');
             echo $response;
-           
+                 
 
-            
+	}
+
+	public function excel(){
+		
+		$curl = curl_init();
+
+		curl_setopt_array($curl, array(
+            CURLOPT_URL => "http://localhost:8001/api/excel",
+           
+            CURLOPT_CUSTOMREQUEST => "POST"
+            ));
+
+			$response = curl_exec($curl);
+			curl_close($curl);
+			$this->load->view('add');
+
 
 	}
 
 
 
-	// public function index()
-	// {
- //            $this->load->model('customers_model');
-
- //            $data['customer'] = $this->customers_model->get_customer(3);
-
- //            $this->load->view('welcome_message',$data);
- //    }
+	
 
 
 
